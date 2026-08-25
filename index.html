@@ -234,14 +234,21 @@ a{color:inherit;text-decoration:none}
 
 <script>
 var telegramLink = "https://t.me/+qppnuGNwvhtiZTJk";
-var instagramLink = "https://www.instagram.com/amg_fx_0";
 
 function goToTelegram() {
     window.location.href = telegramLink;
 }
 
 function goToInstagram() {
-    window.location.href = instagramLink;
+    var username = "amg_fx_0";
+    var appUrl = "instagram://user?username=" + username;
+    var webUrl = "https://www.instagram.com/" + username;
+
+    window.location.href = appUrl;
+
+    setTimeout(function() {
+        window.location.href = webUrl;
+    }, 500);
 }
 
 var currentLang = "en";
